@@ -5,19 +5,15 @@ namespace AbstractClassesChallenge
     public class Square : Rectangle
     {
         // Implement your Square Class here.
-        int i;
-        double Area;
-        public double GetArea()
+        // Implement your Rectangle class here.
+        double squareSide;
+        public override double  GetArea()
         {
-            for (i = 0; i < LengthOfSides.Length; i++)
-
-            {
-                Area = LengthOfSides[i] * LengthOfSides[i];
-            }
+            Console.WriteLine("Enter side of the Square");
+            squareSide = Console.ReadLine();
+            Area = squareSide * squareSide;
             return this.Area;
-
         }
-            
 
     }
 }

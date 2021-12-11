@@ -6,11 +6,6 @@ namespace AbstractClassesChallenge
     {
         public string Name { get; set; } = "";
         public int NumSides { get; set; } = 0;
-        public double[] LengthOfSides = new double[Numsides];
-        public LengthOfSides{
-            get { return LengthOfSides; }
-            set { LengthOfSides = value;}}
-           
         protected double area;
         
         protected double Area 
@@ -25,24 +20,22 @@ namespace AbstractClassesChallenge
                     this.area = value;
             }
         }
-
-        //You must only accept the length of the sides in the constructors along with the name and number of sides.
+        
         // Constructor
         public Shape(string Name, int NumSides)
-{
+        {
             this.Name = Name;
             this.NumSides = NumSides;
-            
         }
 
         // This method returns the general information about the shape.
-        public void GetInfo()
+        public void  GetInfo()
         {
-            System.Console.WriteLine($"This {Name} has {NumSides} sides  and an area of {Area}");
+            System.Console.WriteLine($"This {Name} has {NumSides} sides and an area of {Area}");
         }
 
         // This method returns the area of the shape
-        public double GetArea()
+        public virtual double  GetArea()
         {
             return this.Area;
         }
